@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="container mt-3">
+<a routerLink="/Inicio/tables" class="btn btn-primary btn-lg">Mostrar</a>
+    <table class="table mt-3">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let api of apis">
+                <th scope="row">{{api.id}}</th>
+                <td>{{api.title}}</td>
+                <td>{{api.description}}</td>
+                <td>{{api.price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

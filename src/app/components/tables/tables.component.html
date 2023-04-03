@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+<div class="container p-3">
+    <a class="btn btn-danger btn-lg" routerLink="/Inicio/Api/Productos">Regresar</a>
+    <a class="btn btn-primary btn-lg m-2" routerLink="/">Progress</a>
+    <div class="card-deck p-3" *ngFor="let api of apis">
+        <div class="card">
+            <img class="card-img-top" src="{{api.thumbnail}}" alt="{{api.title}}">
+            <div class="card-body">
+                <h5 class="card-title">{{api.title}}</h5>
+                <p class="card-text">{{api.description}}</p>
+                <p class="card-text"><small class="text-muted">{{api.brand}}</small></p>
+            </div>
+        </div>
+    </div>
+</div>
